@@ -25,9 +25,9 @@ public class OrderedList_inArraySlots
     public int indexOf( Integer findMe) {
 		cost = 0;
 		
-        return indexOf_whileStyle( findMe);
-        // return indexOf_recursive(
-            // findMe, 0, list_iAS.size() -1);
+        //return indexOf_whileStyle( findMe);
+        return indexOf_recursive(
+            findMe, 0, list_iAS.size() -1);
     }
 
 

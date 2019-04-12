@@ -37,7 +37,7 @@ public class UserOfBinarySearch {
 
 
         System.out.println( "search for MISSING values");
-        findOne( "not in middle"
+        findOne( "nogot in middle"
                , orderedList.get( orderedList.size() /2) +1);
         findOne( "before first ", orderedList.get(0) -5);
         findOne( "after last   "
@@ -56,7 +56,7 @@ public class UserOfBinarySearch {
         System.out.println( description + ": "
           + " value " + value
           + " \"found\" at index " + foundAt
-          + ". That's correct, eh? " + (foundAt == -1)
+          + ". That's correct, eh? " + (foundAt < 0)
 		  + " (cost: " + orderedList.cost() + ")"
           );
      }
