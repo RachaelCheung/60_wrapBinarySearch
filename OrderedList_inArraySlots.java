@@ -11,6 +11,11 @@ public class OrderedList_inArraySlots
 
     private java.util.ArrayList<Integer> list_iAS;
 
+	private int cost;
+	
+	public int cost(){
+		return cost;
+	}
 
     /**
       @return the index of any occurrence of
@@ -18,6 +23,8 @@ public class OrderedList_inArraySlots
               \findMe is absent from this list.
      */
     public int indexOf( Integer findMe) {
+		cost = 0;
+		
         return indexOf_whileStyle( findMe);
         // return indexOf_recursive(
             // findMe, 0, list_iAS.size() -1);
@@ -35,6 +42,7 @@ public class OrderedList_inArraySlots
             int pageToCheck = (low + hi) / 2;
             int comparison =
               findMe.compareTo( list_iAS.get( pageToCheck));
+			 cost ++;
             if( comparison == 0) return pageToCheck;
             else
                 if( comparison < 0)
@@ -65,6 +73,7 @@ public class OrderedList_inArraySlots
             int pageToCheck = (low + hi) / 2;
             int comparison =
               findMe.compareTo( list_iAS.get( pageToCheck));
+			 cost ++;
 
 
             if( comparison == 0)    // detect base case
